@@ -137,11 +137,12 @@ def print_fields(data):
 
 async def main():
     try:
-        result = await Runner.run(travel_agent, '''I'm considering a trip to Jamaica sometime in late September or early October. 
-                                                I'm pretty flexible with the exact dates, maybe around a week-long trip.     
-                                                I'd like to get an idea of flight ticket prices and some well-located hotels.     
-                                                I'm also a big foodie, so any recommendations for great local restaurants would be fantastic! 
-                                                Do not ask follow-up questions.''')
+        result = await Runner.run(travel_agent, '''I'm thinking about a trip to Valencia, Spain in late September or early October.
+                                        I'm flexible on exact dates, maybe around a week.
+                                        I'd like a sense of flight prices and some well-located places to stay.
+                                        I'm a big foodie, so great local restaurants would be fantastic.
+                                        Do not ask follow-up questions.''') 
+                                            
         print_fields(result.final_output)
     except Exception as e:
         print("Error", e)
