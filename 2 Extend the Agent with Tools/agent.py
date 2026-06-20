@@ -65,8 +65,7 @@ def print_fields(data):
 
 async def main():
     try:
-        result = await Runner.run(travel_agent, "Plan a 3-day trip to Jamaica under $1500. " \
-                                                "Find uncommon places that are off the beaten path and little known.")
+        result = await Runner.run(travel_agent, "Plan a 3-day trip to Valencia, Spain. Find uncommon places that are off the beaten path, and include current ticket prices and anything happening in the city this month.")
         print_fields(result.final_output)
     except Exception as e:
         print("Error", e)
